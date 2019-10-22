@@ -1,0 +1,70 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+.touch {
+  margin: 0;
+  background-color: #ddd;
+  border-radius: 5px;
+  height: 70%;
+  line-height: 100%;
+  font-size: 12vh;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.event {
+  margin-top: 10px;
+  height: 20%;        
+  background-color: #bbb;
+  border-radius: 5px;
+  font-size: 5vh;
+  color: white;
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+.wrap {
+  position: absolute;      
+  top:300px;
+  left:30px;
+}
+
+.wrap img {
+  width: 300px;
+  max-width: 1000px;
+  min-width: 200px;
+}
+
+.tapRotate {
+  animation: tapRotate 1s ease-in-out;
+  transition: transform .5s; 
+}
+
+@keyframes tapRotate {
+0% { transform: rotate3d(0,0,0,0deg); }
+  
+100% { transform: perspective( 400px ) rotate3d(1,0,0,30deg); }
+}
+
+@keyframes doubleTapRotate {
+  0% { transform: rotate3d(0,0,0,0deg); }
+  100% { transform: perspective( 400px ) rotate3d(1,0,0,60deg); }
+  }
+
+.doubleTabR {
+  animation: doubleTapRotate 1s ease-in-out;
+}
